@@ -11,6 +11,12 @@ function App() {
 		  document.getElementById('root')
 		);
 	}
+	function RenderController(){
+		ReactDOM.render(
+		    <Host />,
+		  document.getElementById('root')
+		);
+	}
   return (
     <div className="App">
     	<input type='button' value='HOST' onClick={RenderHost}/>
