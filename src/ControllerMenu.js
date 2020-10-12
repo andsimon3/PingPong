@@ -1,8 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-//import './App.css';
 
-function HostMenu() {
+function ContollerMenu() {
   return (
     <div className="App">
     	Controller
@@ -10,4 +8,4 @@ function HostMenu() {
   );
 }
 
-export default HostMenu;
+export default ControllerMenu;

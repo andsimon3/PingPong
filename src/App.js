@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 import Host from './HostMenu.js';
+import ControllerMenu from './ControllerMenu.js';
 
 function App() {
 	function RenderHost(){
@@ -13,7 +14,7 @@ function App() {
 	}
 	function RenderController(){
 		ReactDOM.render(
-		    <Host />,
+		    <ControllerMenu />,
 		  document.getElementById('root')
 		);
 	}

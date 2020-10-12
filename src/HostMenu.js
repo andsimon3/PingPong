@@ -5,7 +5,7 @@ import logo from './logo.svg';
 function HostMenu() {
   return (
     <div className="App">
-    	HOST1
+    	HOST11	
     </div>
   );
 }
