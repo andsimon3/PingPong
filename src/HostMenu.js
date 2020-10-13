@@ -7,7 +7,7 @@ function HostMenu() {
 	function ControllerConnect(){
 		const peerConnection = new RTCPeerConnection(configuration);
     	const offer = await peerConnection.createOffer();
-    	await peerConnection.setLocalDescription(offer);
+    	peerConnection.setLocalDescription(offer);
 
 	}
   return (
