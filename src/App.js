@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Host from './HostMenu.js';
 import ControllerMenu from './ControllerMenu.js';
+import Controller from './Controller.js';
 
 function App() {
 	function RenderHost(){
@@ -17,6 +18,9 @@ function App() {
 		    <ControllerMenu />,
 		  document.getElementById('root')
 		);
+	}
+	if(url.searchParams.get("c")!= 'underfined'){
+		<Controller >
 	}
   return (
     <div className="App">
