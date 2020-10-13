@@ -1,12 +1,13 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 function ControllerMenu() {
 	window.addEventListener("deviceorientation", handleOrientation, true);
 	function handleOrientation(event){
-		console.log(event);
+		ReactDOM.render(<div>event.alpha</div>, document.getElementById('ControllerMenu'))
 	}
   return (
-    <div className="App">
+    <div id="ControllerMenu">
     	Controller
     </div>
   );
