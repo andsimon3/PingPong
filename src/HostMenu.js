@@ -13,7 +13,7 @@ function HostMenu() {
     	peerConnection.setLocalDescription(offer);
     	console.log(offer);
     	offer.then((e)=>{
-    		const url = sitteUrl+"/?sdp="+btoa(e);
+    		const url = sitteUrl+"/?sdp="+btoa(e.sdp);
     		ReactDOM.render(<div>{url}<br /><QRCode value={url} size='256'/></div>, document.getElementById('HostMenu'));
     	})
     	ReactDOM.render(<div><br /><QRCode value={offer} size='256'/></div>, document.getElementById('HostMenu'))
