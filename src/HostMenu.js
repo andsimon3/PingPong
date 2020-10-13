@@ -7,14 +7,14 @@ import ReactDOM from 'react-dom';
 function HostMenu() {
 	function ControllerConnect(){
 		const peerConnection = new RTCPeerConnection();
-		const dataChannel = peerConnection.createDataChannel();
+		//const dataChannel = peerConnection.createDataChannel();
     	const offer = peerConnection.createOffer();
     	peerConnection.setLocalDescription(offer);
     	console.log(offer);
     	ReactDOM.render(<QRCode value={offer}/>, document.getElementById('HostMenu'))
-    	peerConnection.addEventListener('datachannel', event => {
+    	/*peerConnection.addEventListener('datachannel', event => {
     		const dataChannel = event.channel;
-		});
+		});*/
 	}
 	ControllerConnect();
   return (
