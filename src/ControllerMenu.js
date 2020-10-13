@@ -4,8 +4,12 @@ import ReactDOM from 'react-dom';
 function ControllerMenu() {
 	const params = window.location.search;
 	const vparams = params.substr(5);
-	const remoteSdp = atob(vparams);
+	var remoteSdp = {};
+	remoteSdp.type = 'offer';
+	remoteSdp.sdp = atob(vparams);
 	console.log(remoteSdp);
+	const peerConnection = new RTCPeerConnection();
+    peerConnection.setRemoteDescription(new RTCSessionDescription(remoteSdp);
 
 	function handleOrientation1(event){
 		ReactDOM.render(<div><p>{event.alpha}</p><p>{event.beta}</p><p>{event.gamma}</p>
