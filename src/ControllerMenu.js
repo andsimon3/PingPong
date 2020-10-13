@@ -21,9 +21,9 @@ function ControllerMenu() {
 	} else {
     	window.addEventListener("MozOrientation", handleOrientation3, true);
 	}
+
   return (
     <div id="ControllerMenu">
-    	Controller
     </div>
   );
 }
