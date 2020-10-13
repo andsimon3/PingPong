@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ContollerMenu() {
+function ControllerMenu() {
   return (
     <div className="App">
     	Controller
