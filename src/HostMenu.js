@@ -11,7 +11,7 @@ function HostMenu() {
     	const offer = peerConnection.createOffer();
     	peerConnection.setLocalDescription(offer);
     	console.log(offer);
-    	ReactDOM.render(<div>{offer.RTCSessionDescription}<br /><QRCode value={offer} size='256'/></div>, document.getElementById('HostMenu'))
+    	ReactDOM.render(<div>{offer.toString()}<br /><QRCode value={offer} size='256'/></div>, document.getElementById('HostMenu'))
     	/*peerConnection.addEventListener('datachannel', event => {
     		const dataChannel = event.channel;
 		});*/
