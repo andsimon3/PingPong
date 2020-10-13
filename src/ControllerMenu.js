@@ -9,7 +9,7 @@ function ControllerMenu() {
 	remoteSdp.sdp = atob(vparams);
 	console.log(remoteSdp);
 	const peerConnection = new RTCPeerConnection();
-    peerConnection.setRemoteDescription(new RTCSessionDescription(remoteSdp);
+    peerConnection.setRemoteDescription(new RTCSessionDescription(remoteSdp));
 
 	function handleOrientation1(event){
 		ReactDOM.render(<div><p>{event.alpha}</p><p>{event.beta}</p><p>{event.gamma}</p>
