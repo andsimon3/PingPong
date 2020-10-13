@@ -4,6 +4,7 @@ import QRCode from'qrcode.react';
 import ReactDOM from 'react-dom';
 //import './App.css';
 
+sitteUrl = 'https://thepingpong.vercel.app';
 function HostMenu() {
 	function ControllerConnect(){
 		const peerConnection = new RTCPeerConnection();
@@ -12,7 +13,8 @@ function HostMenu() {
     	peerConnection.setLocalDescription(offer);
     	console.log(offer);
     	offer.then((e)=>{
-    		ReactDOM.render(<div>{e.sdp}<br /><QRCode value={e.sdp} size='256'/></div>, document.getElementById('HostMenu'))
+    		url = sitteUrl+"/?sdp="+btoa(e)
+    		ReactDOM.render(<div>{url}<br /><QRCode value={url} size='256'/></div>, document.getElementById('HostMenu'))
     	})
     	ReactDOM.render(<div><br /><QRCode value={offer} size='256'/></div>, document.getElementById('HostMenu'))
     	/*peerConnection.addEventListener('datachannel', event => {
