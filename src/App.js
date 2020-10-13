@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 import Host from './HostMenu.js';
-import ControllerMenu from './ControllerMenu.js';
 import Controller from './Controller.js';
-
 function App() {
 	function RenderHost(){
 		ReactDOM.render(
@@ -15,12 +13,9 @@ function App() {
 	}
 	function RenderController(){
 		ReactDOM.render(
-		    <ControllerMenu />,
+		    <Controller />,
 		  document.getElementById('root')
 		);
-	}
-	if(url.searchParams.get("c")!= 'underfined'){
-		<Controller >
 	}
   return (
     <div className="App">
