@@ -5,10 +5,10 @@ function ControllerMenu() {
 	const params = window.location.search;
 	const vparams = params.substr(5);
 	const remoteSdp = atob(vparams);
-
+	console.log(remoteSdp);
 
 	function handleOrientation1(event){
-		ReactDOM.render(<div><p>{remoteSdp}</p><p>{event.alpha}</p><p>{event.beta}</p><p>{event.gamma}</p>
+		ReactDOM.render(<div><p>{event.alpha}</p><p>{event.beta}</p><p>{event.gamma}</p>
 			</div>, document.getElementById('ControllerMenu'))
 	}
 	function handleOrientation2(event){
