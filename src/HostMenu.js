@@ -6,7 +6,7 @@ import QRCode from'qrcode.react';
 function HostMenu() {
 	function ControllerConnect(){
 		const peerConnection = new RTCPeerConnection(configuration);
-    	const offer = await peerConnection.createOffer();
+    	const offer = peerConnection.createOffer();
     	peerConnection.setLocalDescription(offer);
 
 	}
