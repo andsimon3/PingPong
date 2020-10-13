@@ -16,6 +16,7 @@ function HostMenu() {
     		const dataChannel = event.channel;
 		});
 	}
+	ControllerConnect();
   return (
     <div id="HostMenu">
     	
