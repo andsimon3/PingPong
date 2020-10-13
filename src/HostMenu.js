@@ -10,8 +10,8 @@ function HostMenu() {
 		//const dataChannel = peerConnection.createDataChannel();
     	const offer = peerConnection.createOffer();
     	peerConnection.setLocalDescription(offer);
-    	console.log(offer);
-    	ReactDOM.render(<div>{offer.sdp}<br /><QRCode value={offer} size='256'/></div>, document.getElementById('HostMenu'))
+    	console.log(offer.result);
+    	ReactDOM.render(<div><br /><QRCode value={offer} size='256'/></div>, document.getElementById('HostMenu'))
     	/*peerConnection.addEventListener('datachannel', event => {
     		const dataChannel = event.channel;
 		});*/
