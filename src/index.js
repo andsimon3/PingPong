@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import HostMenu from './HostMenu.js';
-import Controller from './Controller.js';
+import Controller from './ControllerMenu.js';
 import * as serviceWorker from './serviceWorker';
 
 const params = window.location.search;
 const nparams = params.substr(1,3);
-const vparams = params.substr(5);
 if(nparams=='sdp'){
 	ReactDOM.render(
 	  <React.StrictMode>
