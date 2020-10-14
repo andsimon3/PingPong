@@ -13,7 +13,9 @@ function ControllerMenu() {
     const answer = peerConnection.createAnswer();
     peerConnection.setLocalDescription(answer);
 	const dataChannel = peerConnection.createDataChannel('dataChannel');
-    dataChannel.send(answer);
+	dataChannel.addEventListener('open', event => {
+    	dataChannel.send(answer);
+	});
 
 	function handleOrientation1(event){
 		ReactDOM.render(<div><p>{event.alpha}</p><p>{event.beta}</p><p>{event.gamma}</p>
