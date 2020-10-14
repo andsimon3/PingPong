@@ -11,6 +11,10 @@ function HostMenu() {
 		//const dataChannel = peerConnection.createDataChannel();
     	const offer = peerConnection.createOffer();
     	peerConnection.setLocalDescription(offer);
+		peerConnection.addEventListener('datachannel', event => {
+    		const dataChannel = event.channel;
+    		console.log(event);
+		});
     	console.log(offer);
     	offer.then((e)=>{
     		const url = sitteUrl+"/?sdp="+btoa(e.sdp);

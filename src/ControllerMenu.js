@@ -10,6 +10,10 @@ function ControllerMenu() {
 	console.log(remoteSdp);
 	const peerConnection = new RTCPeerConnection();
     peerConnection.setRemoteDescription(new RTCSessionDescription(remoteSdp));
+    const answer = peerConnection.createAnswer();
+    peerConnection.setLocalDescription(answer);
+	const dataChannel = peerConnection.createDataChannel();
+    dataChannel.send(answer);
 
 	function handleOrientation1(event){
 		ReactDOM.render(<div><p>{event.alpha}</p><p>{event.beta}</p><p>{event.gamma}</p>
