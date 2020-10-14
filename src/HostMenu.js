@@ -19,6 +19,10 @@ function HostMenu() {
     	offer.then((e)=>{
     		const url = sitteUrl+"/?sdp="+btoa(e.sdp);
     		ReactDOM.render(<div>{url}<br /><QRCode value={url} size='256'/></div>, document.getElementById('HostMenu'));
+    		var remoteSdp = {}
+    		remoteSdp.type = 'answer';
+    		remoteSdp.sdp = e.sdp;
+    		peerConnection.setRemoteDescription(new RTCSessionDescription(remoteSdp));
     	})
     	ReactDOM.render(<div><br /><QRCode value={offer} size='256'/></div>, document.getElementById('HostMenu'))
     	/*peerConnection.addEventListener('datachannel', event => {
