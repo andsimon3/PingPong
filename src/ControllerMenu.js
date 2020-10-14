@@ -12,7 +12,7 @@ function ControllerMenu() {
     peerConnection.setRemoteDescription(new RTCSessionDescription(remoteSdp));
     const answer = peerConnection.createAnswer();
     peerConnection.setLocalDescription(answer);
-	const dataChannel = peerConnection.createDataChannel();
+	const dataChannel = peerConnection.createDataChannel('dataChannel');
     dataChannel.send(answer);
 
 	function handleOrientation1(event){
