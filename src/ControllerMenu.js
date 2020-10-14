@@ -8,11 +8,13 @@ function ControllerMenu() {
 	remoteSdp.type = 'offer';
 	remoteSdp.sdp = atob(vparams);
 	console.log(remoteSdp);
+
 	const peerConnection = new RTCPeerConnection();
     peerConnection.setRemoteDescription(new RTCSessionDescription(remoteSdp));
     const answer = peerConnection.createAnswer();
     peerConnection.setLocalDescription(answer);
 	const dataChannel = peerConnection.createDataChannel('dataChannel');
+    console.log(answer);
 	dataChannel.addEventListener('open', event => {
     	dataChannel.send(answer);
 	});
